@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="starterFiles/fontawesome-free-6.1.1-web/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="control-buttons">
+      <span>Start Game</span>
+    </div>
+    <div class="info-container">
+      <div class="name">Hello: <span></span></div>
+      <div class="timer">Timer: <span class="seconds"></span></div>
+      <div class="success-matches">Success Matches : <span>0</span></div>
+      <div class="tries">Wrong Tries: <span>0</span></div>
+    </div>
+    <div></div>
+    <div class="block-container">
+      <div class="game-block" data-character="a">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-a"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="a">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-a"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="b">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-b"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="b">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-b"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="c">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-c"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="c">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-c"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="d">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-d"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="d">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-d"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="e">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-e"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="e">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-e"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="f">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-f"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="f">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-f"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="g">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-g"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="g">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-g"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="h">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-h"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="h">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-h"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="i">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-i"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="i">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-i"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="j">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-j"></i>
+        </div>
+      </div>
+      <div class="game-block" data-character="j">
+        <div class="block front"></div>
+        <div class="block back">
+          <i class="fa-solid fa-j"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- pop up part -->
+    <section class="pop-up-container">
+      <div class="card-input">
+        <img src="input2.png" alt="" />
+        <h2>Please Enter Your Name</h2>
+        <!-- <p>if you didn't enter a name, you will be recognized as unknown</p> -->
+        <input
+          id="input-name"
+          class="input-name"
+          type="text"
+          placeholder="Name"
+          autofocus
+        />
+        <button class="btn-close" onclick="hide_pop_input()">Done</button>
+      </div>
+
+      <div class="card-confirmation">
+        <img src="check-icon-1.png" alt="" />
+        <h2>Horray! You are Awesome 🎉😍💓</h2>
+        <p>Keep it up Man 🙌😉</p>
+        <button class="btn-close" onclick="hide_pop_conformation()">
+          Close
+        </button>
+      </div>
+
+      <div class="card-warning">
+        <img src="warning2.png" alt="" />
+        <h2>Game Over! You Suck Dude 😂</h2>
+        <p>keep Trying, you can do it 😘</p>
+        <button class="btn-close" onclick="hide_pop_warning()">Close</button>
+      </div>
+    </section>
+    <!-- pop up part -->
+
+    <audio id="relax" src="relax.mp3" preload="auto" loop></audio>
+    <audio id="success" src="success.mp3" preload="auto"></audio>
+    <audio id="fail" src="fail.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
